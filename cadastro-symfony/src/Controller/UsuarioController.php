@@ -6,10 +6,14 @@ namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
+
+/**
+ * @Route("/", name="web_usuario_")
+ */
 class UsuarioController
 {
      /**
-     * @Route("/", methods={"GET"})
+     * @Route("/", methods={"GET"}, name="index")
      */
     public function index(): Response
     {
@@ -17,7 +21,7 @@ class UsuarioController
     }
 
     /**
-     * @Route("/salvar", methods={"POST"})
+     * @Route("/salvar", methods={"POST"}, name="salvar")
      */
     public function salvar(): Response
     {
